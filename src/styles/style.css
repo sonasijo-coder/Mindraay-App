@@ -1,0 +1,493 @@
+/* Hide the checkbox */
+.sidebar-toggle-checkbox {
+  display: none;
+}
+
+/* Hamburger */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger-btn span {
+  width: 25px;
+  height: 3px;
+  background: #2ec9a8;
+  border-radius: 2px;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: #0b0f1a;
+  border-right: 1px solid rgba(46, 201, 168, 0.15);
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  color: #2ec9a8;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-close-btn {
+  display: none;
+}
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding: 0 12px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 16px;
+  margin-bottom: 4px;
+
+  color: #fff;
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  transition: .25s;
+}
+
+.sidebar-link:hover {
+  background: rgba(46,201,168,.08);
+}
+
+.active-dot {
+  display: none;
+}
+
+.sidebar-link.active .active-dot {
+  display: block;
+  margin-left: auto;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #2ec9a8;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(46,201,168,.15);
+  flex-shrink: 0;
+}
+
+.sidebar-signin p {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.patient-btn,
+.professional-btn{
+  width:100%;
+  padding:12px;
+  border-radius:30px;
+  font-weight:700;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.patient-btn{
+  background:#2ec9a8;
+  color:#0b0f1a;
+  border:none;
+  margin-bottom:10px;
+}
+
+.professional-btn{
+  background:transparent;
+  border:1px solid #2ec9a8;
+  color:#2ec9a8;
+}
+
+/* ================= MOBILE + TABLET (≤1024px) ================= */
+
+@media (max-width:1024px){
+
+  .hamburger-btn{
+    display:flex;
+    position:fixed;
+    top:16px;
+    left:16px;
+  }
+
+  .sidebar-toggle-checkbox:checked ~ .hamburger-btn{
+    display:none;
+  }
+
+  .sidebar{
+    width:85%;
+    max-width:300px;
+    transform:translateX(-100%);
+    transition:.3s;
+  }
+
+  .sidebar-toggle-checkbox:checked ~ .sidebar{
+    transform:translateX(0);
+  }
+
+  .sidebar-header{
+    justify-content:space-between;
+  }
+
+  .sidebar-close-btn{
+    display:block;
+    cursor:pointer;
+    color:#2ec9a8;
+    font-size:22px;
+  }
+
+  .sidebar-toggle-checkbox:checked ~ .sidebar-overlay{
+    display:block;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:999;
+    cursor:pointer;
+  }
+
+}
+
+/* Tablet-il sidebar konjam narrow */
+@media (min-width:400px) and (max-width:1024px){
+  .sidebar{
+    max-width:280px;
+  }
+}
+
+
+/* ============================================================
+   ===================== BROWSE BANNER SECTION ================
+   ============================================================ */
+
+/* BrowseBanner Main Container */
+.browse-banner {
+  background: #249283; /* ഡാർക്ക് ഗ്രീൻ കളർ */
+  padding: 40px 40px 48px; /* മുകളിലും വശങ്ങളിലും സ്പേസ് */
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* ബട്ടണും താഴത്തെ കണ്ടെന്റും തമ്മിലുള്ള അകലം */
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Back Button Styling */
+.banner-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12); /* ലൈറ്റ് ട്രാൻസ്പാരന്റ് ബാക്ക്ഗ്രൗണ്ട് */
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content; /* ബട്ടൺ നീണ്ടുപോവാതിരിക്കാൻ */
+  transition: background 0.2s ease;
+}
+
+.banner-back-btn:hover {
+  background: rgba(255, 255, 255, 0.2); /* ഹോവർ ചെയ്യുമ്പോൾ അല്പം കൂടി തെളിയും */
+}
+
+/* Content Container */
+.browse-banner-content {
+  max-width: 800px;
+  text-align: left; /* കണ്ടെന്റുകൾ ഇടത് ഭാഗത്തേക്ക് അലൈൻ ചെയ്തു */
+}
+
+/* Title */
+.browse-banner-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+/* Subtitle */
+.browse-banner-subtitle {
+  font-size: 16px;
+  color: #a3c7c2; /* സബ്ടൈറ്റിലിന് ലൈറ്റ് ഗ്രീൻ/ഗ്രേ ഷേഡ് */
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* ============================================================
+   ===================== LOCATION FILTER SECTION ==============
+   ============================================================ */
+
+/* Main Wrapper */
+.location-filter-container {
+  background: #09131e; /* ഡാർക്ക് ബാക്ക്ഗ്രൗണ്ട് */
+  border: 1px solid rgba(46, 201, 168, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+/* Flex row for top items */
+.location-main-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Individual Box Layout */
+.filter-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.location-box { flex: 2; }   /* ലൊക്കേഷൻ ബോക്സിന് കൂടുതൽ സ്ഥലം */
+.slider-box { flex: 2; }     /* സ്ലൈഡറിനും നല്ല സ്ഥലം */
+.sort-box { flex: 1.5; }     /* സോർട്ടിംഗിന് ആവശ്യത്തിന് സ്ഥലം */
+
+/* Labels */
+.filter-label {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Input and Select Styling */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-icon {
+  position: absolute;
+  left: 14px;
+  color: #2ec9a8; /* പച്ച കളർ */
+  font-size: 16px;
+}
+
+.filter-input, .filter-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(46, 201, 168, 0.2);
+  border-radius: 10px;
+  padding: 12px 14px 12px 40px; /* ഐക്കണിന് വേണ്ടി ലെഫ്റ്റ് പാഡിംഗ് */
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  height: 46px;
+  box-sizing: border-box;
+}
+
+.filter-select {
+  padding-left: 14px; /* സെലക്റ്റിന് ഐക്കൺ ഇല്ലാത്തതിനാൽ സാധാരണ പാഡിംഗ് */
+  cursor: pointer;
+}
+
+/* Slider Custom Styling */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 46px;
+}
+
+.filter-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 50px;
+  background: #233142; /* സ്ലൈഡറിന്റെ ബാക്ക്ഗ്രൗണ്ട് */
+  outline: none;
+}
+
+/* സ്ലൈഡറിന്റെ മൂവ് ചെയ്യുന്ന ഭാഗം (Thumb) പച്ചയാക്കാൻ */
+.filter-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2ec9a8;
+  cursor: pointer;
+}
+
+.slider-value {
+  color: #2ec9a8;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+/* Current Location Button */
+.current-location-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(46, 201, 168, 0.08);
+  border: 1px solid rgba(46, 201, 168, 0.2);
+  color: #2ec9a8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.current-location-btn:hover {
+  background: rgba(46, 201, 168, 0.15);
+}
+
+.btn-icon {
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   ================== COMPLETE RESPONSIVE DESIGN =============
+   ============================================================ */
+
+/* ----------- Laptop & Medium Screens (1200px വരെ) ----------- */
+@media (max-width: 1200px) {
+  .location-filter-container {
+    max-width: 95%; /* വശങ്ങളിൽ മുട്ടിനിൽക്കാതിരിക്കാൻ */
+    padding: 20px;
+  }
+}
+
+/* ----------- Tablet Screens (400px മുതൽ 1024px വരെ) ----------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .browse-banner {
+    padding: 32px 30px 40px;
+  }
+  
+  .browse-banner-title {
+    font-size: 28px;
+  }
+
+  .location-main-row {
+    gap: 16px; /* ബോക്സുകൾ തമ്മിലുള്ള അകലം കുറച്ചു */
+  }
+
+  /* ടാബ്‌ലെറ്റിൽ വീതി കൃത്യമാക്കാൻ ഫ്ലെക്സ് റേഷ്യോ അഡ്ജസ്റ്റ് ചെയ്തു */
+  .location-box { flex: 1.8; }
+  .slider-box { flex: 1.8; }
+  .sort-box { flex: 1.4; }
+  
+  .filter-input, .filter-select, .slider-wrapper {
+    height: 42px; /* ഇൻപുട്ട് ഹൈറ്റ് അല്പം കുറച്ചു */
+    font-size: 13px;
+  }
+}
+
+/* ----------- Mobile View (768px വരെ) ----------- */
+@media (max-width: 400px) {
+  /* Browse Banner Mobile */
+  .browse-banner {
+    padding: 24px 20px 32px;
+    gap: 16px;
+  }
+
+  .browse-banner-title {
+    font-size: 24px;
+  }
+
+  .browse-banner-subtitle {
+    font-size: 14px;
+  }
+
+  .banner-back-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  /* Location Filter Mobile */
+  .location-filter-container {
+    padding: 16px;
+    margin: 10px auto;
+    max-width: 92%;
+  }
+
+  .location-main-row {
+    flex-direction: column; /* മൊബൈലിൽ ഫിൽറ്ററുകൾ ഒന്നunified താഴെ താഴെ വരും */
+    align-items: stretch;   /* എല്ലാ ഫീൽഡുകൾക്കും ഫുൾ വീതി ലഭിക്കാൻ */
+    gap: 16px;
+  }
+
+  .location-box, .slider-box, .sort-box {
+    width: 100%;
+  }
+
+  .filter-label {
+    font-size: 13px;
+  }
+
+  .filter-input, .filter-select, .slider-wrapper {
+    height: 44px;
+  }
+}
+
+/* ----------- Small Mobile Phones (480px-ൽ താഴെ) ----------- */
+@media (max-width: 480px) {
+  .browse-banner-title {
+    font-size: 20px;
+  }
+  
+  .browse-banner-subtitle {
+    font-size: 13px;
+  }
+
+  .current-location-btn {
+    width: 100%; /* ചെറിയ ഫോണുകളിൽ ലൊക്കേഷൻ ബട്ടൺ ഫുൾ വിഡ്ത് ആകും */
+    justify-content: center;
+  }
+}

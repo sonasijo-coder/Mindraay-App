@@ -1,0 +1,288 @@
+:root {
+  --bg-color: #0b141a;
+  --panel-bg: #111c24;
+  --accent-color: #0d9488;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-color: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Page Layout Container */
+.auth-page-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Left Side (Sign-In Area) */
+.auth-left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Header Component Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.auth-header h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Form Component Styles */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.form-group input {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--accent-color);
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+/* Options & Buttons */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.forgot-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.btn-primary { background-color: var(--accent-color); color: white; }
+.btn-outline { background-color: transparent; border: 1px solid var(--border-color); color: white; }
+.btn-social { background-color: transparent; border: 1px solid var(--border-color); color: white; }
+.btn:hover { opacity: 0.9; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin: 10px 0;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+.divider:not(:empty)::before { margin-right: .25em; }
+.divider:not(:empty)::after { margin-left: .25em; }
+
+/* Footer Component Styles */
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.signup-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Right Side - Features Section */
+.auth-right-section {
+  flex: 1.2;
+  background-color: var(--panel-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.features-container {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.features-container h3 { font-size: 24px; margin-bottom: 8px; }
+
+.feature-item { display: flex; gap: 16px; }
+.feature-icon { font-size: 24px; }
+.feature-item h4 { font-size: 16px; margin-bottom: 4px; }
+.feature-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+/* Testimonial Styles */
+.testimonial-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+.testimonial-user { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.user-avatar { font-size: 28px; }
+.testimonial-user h5 { font-size: 14px; }
+.testimonial-user span { font-size: 12px; color: var(--text-secondary); }
+.testimonial-text { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Laptop & Mobile - Hidden Right Box)
+   ========================================================================== */
+@media (max-width: 1150px) {
+  .auth-right-section {
+    display: none; /* ഇവിടെ വലതുവശത്തെ ബോക്സ് അപ്രത്യക്ഷമാകും */
+  }
+  .auth-left-section {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* Password requirements validation check UI */
+.password-requirements {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: -8px;
+}
+
+.password-requirements p {
+  margin-bottom: 6px;
+}
+
+.password-requirements ul {
+  list-style: none;
+  padding-left: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.password-requirements li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0d9488; /* പച്ച നിറത്തിലുള്ള ടിക്ക് മാർക്ക് */
+}
+
+.check-icon {
+  font-weight: bold;
+}
+
+/* Footer Terms & Privacy text styling */
+.terms-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.terms-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Lap size, Tab & Mobile - Hidden Right Box)
+   ========================================================================== */
+@media (max-width: 1250px) {
+  .auth-right-section {
+    display: none; /* ലാപ്ടോപ്പ്, ടാബ്‌ലെറ്റ്, മൊബൈൽ സൈസുകളിൽ സെക്കന്റ് ബോക്സ് പൂർണ്ണമായി മറയും */
+  }
+  .auth-left-section {
+    flex: 1;
+    width: 100%;
+  }
+}

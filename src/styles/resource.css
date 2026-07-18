@@ -1,0 +1,750 @@
+/* ==========================================================================
+   RESOURCE BANNER STYLES & NAVIGATION
+   ========================================================================== */
+.resource-banner-header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 10px 24px;
+  box-sizing: border-box;
+  background-color: #080f14; /* ഡാർക്ക് ബാക്ക്ഗ്രൗണ്ട് */
+}
+
+/* നാവിഗേഷൻ റോ */
+.resource-banner-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* ബാക്ക് ബട്ടൺ സ്റ്റൈൽ */
+.resource-back-btn {
+  background-color: #0b1a20;
+  border: 1px solid #1e2d35;
+  color: #00bfa5; /* ഗ്രീൻ ടെക്സ്റ്റ് */
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.resource-back-btn:hover {
+  background-color: #12252e;
+}
+
+/* റൈറ്റ് സൈഡ് ബട്ടണുകൾ */
+.resource-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.resource-link-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.resource-link-btn:hover {
+  color: #00bfa5;
+}
+
+.resource-signin-btn {
+  background-color: #00bfa5;
+  color: #080f14;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.resource-signin-btn:hover {
+  background-color: #00a892;
+}
+
+/* സെന്റർ കണ്ടെന്റ് (Title & Subtitle) */
+.resource-banner-content {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.resource-main-title {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.5px;
+}
+
+.resource-subtitle {
+  color: #8696a0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RESOURCE SEARCH BAR SPECIFIC STYLES
+   ========================================================================== */
+.search-bar-container.search-bar-resource {
+  max-width: 750px;
+  margin: 30px auto 40px auto;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background: transparent !important; 
+  box-shadow: none !important;        
+}
+
+.search-bar-resource .search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #0c171e !important; 
+  background-image: none !important;    
+  border: 1px solid #1e2d35 !important;
+  border-radius: 28px !important;       
+  padding: 6px 6px 6px 16px !important; 
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;                     
+}
+
+.search-bar-resource .search-icon {
+  background: transparent !important;  
+  color: #8696a0 !important;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.search-bar-resource .search-input {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  padding-right: 10px;
+  box-shadow: none !important;         
+}
+
+.resource-inner-search-btn {
+  background-color: #00bfa5 !important; 
+  color: #080f14 !important;
+  border: none !important;
+  padding: 10px 24px !important;
+  border-radius: 20px !important;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap; 
+}
+
+.resource-inner-search-btn:hover {
+  background-color: #00a892 !important;
+}
+
+.resource-inner-search-btn:active {
+  transform: scale(0.97); 
+}
+
+/* ==========================================================================
+   RESOURCE GRID & CARD LAYOUT
+   ========================================================================== */
+.resource-categories-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.resource-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.resource-cat-card {
+  background-color: #0c171e; 
+  border: 1px solid #1e2d35;
+  border-radius: 16px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.resource-cat-card:hover {
+  border-color: #00bfa5; 
+  transform: translateY(-2px);
+}
+
+.resource-cat-icon {
+  font-size: 32px;
+  color: #00bfa5;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resource-cat-title {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.resource-cat-desc {
+  color: #8696a0;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   ARTICLE META & CARD UTILITIES
+   ========================================================================== */
+.article-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.article-read-time {
+  color: #8696a0;
+  font-size: 12px;
+}
+
+.article-author-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(30, 45, 53, 0.5);
+  padding-top: 12px;
+  margin-top: auto; 
+  margin-bottom: 14px;
+}
+
+.article-author-name {
+  color: #8696a0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.article-date-text {
+  color: #8696a0;
+  font-size: 12px;
+}
+
+.webinar-actions {
+  margin-top: auto;
+  width: 100%;
+}
+
+.webinar-actions .register-btn {
+  width: 100%;
+  background-color: #00bfa5 !important;
+  color: #080f14 !important;
+  border: none;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.webinar-actions .register-btn:hover {
+  background-color: #00a892 !important;
+}
+
+/* ==========================================================================
+   MENTAL HEALTH TOOLS & TRACKERS SECTION
+   ========================================================================== */
+.tools-section-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.tools-section-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.tools-main-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.tools-sub-title {
+  color: #8696a0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.tools-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.tool-card-item {
+  background-color: #0c171e; 
+  border: 1px solid #1e2d35;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.tool-card-item:hover {
+  border-color: #00bfa5;
+  transform: translateY(-2px);
+}
+
+.tool-icon-box {
+  background-color: #12222c;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tool-emoji {
+  font-size: 28px;
+}
+
+.tool-tag-container {
+  margin-bottom: 12px;
+}
+
+.tool-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 191, 165, 0.1);
+  color: #00bfa5;
+}
+
+.tool-card-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.tool-card-desc {
+  color: #8696a0;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+  flex-grow: 1; 
+}
+
+.open-tool-btn {
+  width: 100%;
+  background-color: #00bfa5;
+  color: #080f14;
+  border: none;
+  padding: 12px 0;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.2s ease;
+}
+
+.open-tool-btn:hover {
+  background-color: #00a892;
+}
+
+/* ==========================================================================
+   DOWNLOADABLE RESOURCES & COMMUNITY GENERICS
+   ========================================================================== */
+.resources-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.section-header-block {
+  margin-bottom: 24px;
+}
+
+.section-main-heading {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.section-sub-heading {
+  color: #8696a0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.downloads-grid-layout, .community-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.download-card-item {
+  background-color: #0c171e;
+  border: 1px solid #1e2d35;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.download-card-top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.file-icon-box {
+  background-color: #12222c;
+  padding: 12px;
+  border-radius: 10px;
+  color: #00bfa5;
+  font-size: 24px;
+  display: flex;
+}
+
+.file-title {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 0 0 4px 0;
+  font-weight: 500;
+}
+
+.file-meta {
+  color: #8696a0;
+  font-size: 12px;
+}
+
+.download-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(30, 45, 53, 0.5);
+  padding-top: 14px;
+}
+
+.download-count {
+  color: #8696a0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.download-action-btn {
+  background-color: #00bfa5;
+  color: #080f14;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   COMMUNITY POSTS CSS
+   ========================================================================== */
+.community-card-item {
+  background-color: #0c171e;
+  border: 1px solid #1e2d35;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card-title {
+  color: #ffffff;
+  font-size: 17px;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.post-card-desc {
+  color: #8696a0;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.post-card-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #8696a0;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.post-stats-row {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.discuss-link-btn {
+  color: #00bfa5;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.discuss-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   CRISIS SUPPORT BANNER CSS
+   ========================================================================== */
+.crisis-banner-container {
+  max-width: 1152px;
+  margin: 60px auto;
+  background-color: #0c171e;
+  border: 1px solid #1e2d35;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.crisis-title {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+.crisis-desc {
+  color: #8696a0;
+  font-size: 14px;
+  margin: 0 0 24px 0;
+}
+
+.crisis-actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.crisis-hotline-btn {
+  background-color: #00bfa5;
+  color: #080f14;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.crisis-text-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #1e2d35;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.crisis-text-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* ==========================================================================
+   UPDATED UNIFIED RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* 1. Large Screen Adjustments (1200px വരെ) */
+@media (max-width: 1200px) {
+  .resource-banner-header,
+  .resource-categories-container,
+  .tools-section-wrapper,
+  .resources-section-container,
+  .crisis-banner-container {
+    max-width: 95%;
+  }
+}
+
+/* 2. Tablet Screens & Medium Devices (992px വരെ) */
+@media (max-width: 992px) {
+  .resource-categories-grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 കോളത്തിൽ നിന്നും 2 കോളം ആയി മാറും */
+    gap: 16px;
+  }
+  
+  .tools-grid-layout, 
+  .downloads-grid-layout, 
+  .community-grid-layout {
+    grid-template-columns: repeat(2, 1fr); /* 3 കോളത്തിൽ നിന്നും 2 കോളം ആയി മാറും */
+    gap: 20px;
+  }
+}
+
+/* 3. Small Tablets & Custom Mobile Breakpoint (650px വരെ) */
+@media (max-width: 650px) {
+  .resource-banner-header {
+    padding: 16px 16px 10px 16px;
+  }
+
+  .resource-banner-nav {
+    margin-bottom: 30px;
+  }
+
+  .resource-main-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .resource-subtitle {
+    font-size: 14px;
+  }
+
+  /* റിസോഴ്സ് സെർച്ച് ബാർ മൊബൈൽ റെസ്പോൺസീവ് */
+  .search-bar-container.search-bar-resource {
+    margin: 20px auto 30px auto;
+    padding: 0 16px;
+  }
+  
+  .search-bar-resource .search-input-wrapper {
+    padding: 4px 4px 4px 12px !important;
+  }
+
+  .search-bar-resource .search-input {
+    font-size: 14px;
+  }
+
+  .resource-inner-search-btn {
+    padding: 8px 16px !important;
+    font-size: 13px;
+  }
+}
+
+/* 4. General Mobile Viewport (600px വരെ) */
+@media (max-width: 600px) {
+  .tools-grid-layout, 
+  .downloads-grid-layout, 
+  .community-grid-layout {
+    grid-template-columns: 1fr; /* 1 കോളത്തിലേക്ക് ചുരുങ്ങും */
+    gap: 16px;
+  }
+
+  .tools-section-wrapper,
+  .resources-section-container,
+  .crisis-banner-container {
+    padding: 24px 16px;
+    margin: 40px auto;
+  }
+
+  .tools-main-title {
+    font-size: 20px;
+  }
+
+  /* ക്രൈസിസ് ബട്ടണുകൾ താഴെ താഴെയാക്കാൻ */
+  .crisis-actions-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .crisis-hotline-btn,
+  .crisis-text-btn {
+    width: 100%;
+  }
+}
+
+/* 5. Small & Narrow Mobile Screens (550px മുതൽ 400px വരെ) */
+@media (max-width:400px) {
+  .resource-categories-grid {
+    grid-template-columns: 1fr; /* കാറ്റഗറി കാർഡുകൾ സിംഗിൾ കോളം ആകും */
+    gap: 14px;
+  }
+  
+  .resource-categories-container {
+    padding: 0 16px;
+    margin: 30px auto;
+  }
+  
+  .resource-cat-card {
+    padding: 24px 16px;
+  }
+
+  /* നാവിഗേഷൻ കമ്പോണന്റ് ഇടുങ്ങിയ സ്ക്രീനിൽ താഴേക്ക് അലൈൻ ചെയ്യാൻ */
+  .resource-banner-nav {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .resource-nav-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .resource-back-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,295 @@
+/* Container Wrapper */
+.main-wrapper {
+  background-color: #0b141a;
+  min-height: 100vh;
+  padding: 24px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+  
+}
+
+/* --- HEADER STYLES --- */
+.notification-header-container {
+  max-width: 1200px;
+  margin: 0 auto 24px auto;
+  padding: 0 24px;
+  color: #ffffff;
+  box-sizing: border-box;
+  
+}
+
+.notification-container{
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #182c35;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 35px;
+  margin-top: 20px;
+  
+}
+
+.title-section {
+  margin-top: 24px;
+}
+
+.title-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 35px;
+}
+
+.badge {
+  background-color: #00bfa5;
+  color: #0b141a;
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #8696a0;
+  margin: 8px 0 0 0;
+  font-size: 14px;
+   margin-left: 35px;
+}
+
+.controls-card {
+  background-color: #0f2229;
+  border: 1px solid rgba(0, 191, 165, 0.15);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-sizing: border-box;
+   margin-left: 35px;
+}
+
+.toggle-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.toggle-subtitle {
+  font-size: 12px;
+  color: #8696a0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-mark-read, .btn-clear-all {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #182c35;
+  white-space: nowrap;
+}
+
+.btn-mark-read { color: #00bfa5; }
+.btn-clear-all { color: #ea4335; background-color: rgba(234, 67, 53, 0.1); }
+
+/* Switch Slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #555; transition: 0.3s; border-radius: 24px;
+}
+.slider:before {
+  position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px;
+  background-color: white; transition: 0.3s; border-radius: 50%;
+}
+input:checked + .slider { background-color: #00bfa5; }
+input:checked + .slider:before { transform: translateX(24px); }
+
+/* Filter Tabs */
+.filter-tabs {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox-il scrollbar hide */
+  padding-bottom: 4px;
+   margin-left: 35px;
+}
+.filter-tabs::-webkit-scrollbar { display: none; } /* Chrome/Safari scrollbar hide */
+
+.filter-btn {
+  padding: 10px 20px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent; color: #ffffff; cursor: pointer; font-size: 14px; font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.filter-btn.active { background-color: #00bfa5; color: #0b141a; border-color: #00bfa5; }
+
+
+/* --- LIST & CARD STYLES --- */
+.notification-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+   margin-left: 35px;
+}
+
+.notification-card {
+  position: relative;
+  background-color: #0f2229;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.notification-card.unread { border-color: rgba(0, 191, 165, 0.15); }
+
+.icon-wrapper {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* Icon Colors */
+.type-calendar { background-color: rgba(0, 191, 165, 0.1); color: #00bfa5; }
+.type-message { background-color: rgba(144, 99, 244, 0.1); color: #9063f4; }
+.type-clock { background-color: rgba(255, 183, 77, 0.1); color: #ffb74d; }
+.type-success { background-color: rgba(46, 125, 50, 0.1); color: #2e7d32; }
+.type-star { background-color: rgba(255, 143, 0, 0.1); color: #ff8f00; }
+.type-danger { background-color: rgba(234, 67, 53, 0.1); color: #ea4335; }
+
+.card-content { flex-grow: 1; min-width: 0; }
+.card-title { font-size: 16px; font-weight: 600; color: #ffffff; margin: 0 0 6px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.unread-dot { width: 8px; height: 8px; background-color: #00bfa5; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.card-description { color: #8696a0; font-size: 14px; line-height: 1.5; margin: 0 0 12px 0; word-break: break-word; }
+.card-footer { display: flex; align-items: center; gap: 16px; font-size: 13px; flex-wrap: wrap; }
+.time-text { color: #667781; }
+
+.action-link { text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 4px; }
+.color-calendar, .color-success { color: #00bfa5; }
+.color-message { color: #9063f4; }
+.color-clock { color: #ffb74d; }
+.color-star { color: #ff8f00; }
+.color-danger { color: #ea4335; }
+.arrow { font-size: 16px; line-height: 1; }
+
+/* --- Hover Actions --- */
+.hover-actions {
+  position: absolute; top: 16px; right: 20px;
+  display: flex; gap: 8px; opacity: 0; visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.notification-card:hover .hover-actions { opacity: 1; visibility: visible; }
+
+.action-btn {
+  background-color: #182c35; border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.tick-btn { color: #8696a0; }
+.tick-btn:hover { color: #00bfa5; background-color: rgba(0, 191, 165, 0.1); }
+.delete-btn { color: #8696a0; }
+.delete-btn:hover { color: #ea4335; background-color: rgba(234, 67, 53, 0.1); }
+
+/* ==========================================================================
+   RESPONSIVE — TABLET (≤1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .notification-header-container,
+  .notification-list-container {
+    padding: 0 32px;
+  }
+
+  .title-section h2 { font-size: 24px; }
+
+  .controls-card { padding: 14px 18px; }
+
+  /* Tab/mobile-il hover illathathu kondu action buttons ellappozhum kaanikkanam */
+  .hover-actions {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 12px;
+    justify-content: flex-end;
+  }
+
+  .notification-card { flex-direction: column; gap: 12px; }
+}
+
+/* ==========================================================================
+   RESPONSIVE — MOBILE (≤600px)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .main-wrapper { padding: 16px 0; }
+
+  .notification-header-container,
+  .notification-list-container {
+    padding: 0 20px;
+  }
+
+  .title-section h2 { font-size: 20px; }
+
+  .back-btn { padding: 6px 12px; font-size: 13px; }
+
+  .controls-card { flex-direction: column; align-items: flex-start; padding: 14px 16px; }
+  .action-buttons { width: 100%; justify-content: flex-start; }
+  .btn-mark-read, .btn-clear-all { flex: 1; text-align: center; }
+
+  .toggle-section { width: 100%; justify-content: space-between; }
+
+  .notification-card { padding: 14px; }
+
+  .card-title { font-size: 15px; }
+  .card-description { font-size: 13px; }
+}

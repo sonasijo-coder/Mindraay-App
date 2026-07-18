@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;       
+  background: #0b0f1a;
+  margin-left: 0;    
+}
+
+/* 2. Main content area */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  /* overflow-y: auto;  <--- ഇരട്ട സ്ക്രോൾ ഒഴിവാക്കാൻ ഇത് കമന്റ് ചെയ്യുക/ഒഴിവാക്കുക */
+  background: #0b0f1a;
+  color: white;
+  
+  margin-left: 260px; 
+  
+  /* padding ഇവിടെ പൂജ്യം ആക്കുന്നതാണ് നല്ലത്, കാരണം പേജിലെ ഓരോ സെക്ഷനും സ്വന്തമായി പാഡിങ് ഉണ്ട് */
+  padding: 0; 
+  width: calc(100% - 260px); 
+}
+
+/* പ്രധാന തിരുത്ത്: ഇവിടെ മാത്രം സ്ക്രോൾ നിയന്ത്രിക്കുക, വലിപ്പം കൃത്യമാക്കുക */
+.main-content-container {
+  height: 100vh;
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column; /* സെക്ഷനുകൾ ഒന്നിന് പുറകെ ഒന്നായി കൃത്യമായി വരാൻ */
+}
+
+/* ഹീറോ റാപ്പർ സ്റ്റൈൽ */
+.hero-wrapper {
+  background: linear-gradient(
+    180deg,
+    #0b1a2e 0%,
+    #0d3b3a 55%,
+    #12a892 100%
+  );
+  width: 100%;
+}
+
+/* Content sections styling */
+.page-content {
+  padding: 24px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0; 
+    width: 100%;
+    padding: 0;
+  }
+}

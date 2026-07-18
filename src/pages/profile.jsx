@@ -7,7 +7,7 @@ import PrivacyControl from '../components/66_PrivacyControl';
 import WellnessTracking from '../components/67_WellnessTracking';
 import MoodTrackerChart from '../components/69_MoodTracker';
 import TherapyGoals from '../components/70_TherapistsGoals';
-import Milestones from '../components/71_Milestones';
+import Milestones from '../components/71_MileStones';
 
 function Profile() {
   return (

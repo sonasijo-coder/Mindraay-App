@@ -3,7 +3,7 @@ import SettingsHeader from '../components/72_SettingsHeader';
 import NotificationSettings from '../components/73_Notificationsetting';
 import PrivacySettings from '../components/75_Privacysettings';
 // 62nd Component ഇമ്പോർട്ട് ചെയ്യുന്നു
-import PersonalDetails from '../components/62_PersonalDetails'; 
+import PersonalDetails from '../components/62_Personaldetails'; 
 import SecuritySettings from '../components/77_SecurityOption';
 import SaveButton from '../components/79_SaveBtn';
 
